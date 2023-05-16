@@ -47,7 +47,7 @@ const TAGS = [  "html",
 let stack = [];
 
 // Modul: HTML-Synthese | Test
-//output(getHTML());
+// output(getHTML());
 function getHTML() {
   
     let htmlStr = "";
@@ -104,3 +104,50 @@ function isOpenElement(tag) {
 function output(outputData) {
     console.log(outputData);
 }
+
+
+
+
+// const ERR_STR = "ERROR";
+// const COBJ = {open_o:"<",close_o:"</",close:">"};
+// const CONTROLS = ["<", "</", ">"];
+// const TAGS = [
+//   "html", "head","head", "body", "h1","h1", "p","p", "ul", "li","li","li","li","li","li", "ul", "body", "html"
+// ];
+// let stack = [];
+
+// function getHTML() {
+//   let htmlStr = "";
+//   for (let i = 0; i < TAGS.length; i++) {
+//     if (isOpenElement(TAGS[i])) {
+//       htmlStr += getElement(TAGS[i],"open");
+//     } else {
+//       htmlStr += getElement(TAGS[i],"close");
+//     }
+//   }
+//   return htmlStr;
+// }
+
+// function getElement(tag,op) {
+//   switch (op) {
+//     case "open":
+//       return COBJ.open_o + tag + COBJ.close;
+//     case "close":
+//       return COBJ.close_o + tag + COBJ.close;
+//     default:
+//       return ERR_STR;
+//   }
+// }
+
+// function isOpenElement(tag) {
+//   let cond = (tag != stack[stack.length-1]);
+//   if (cond) {
+//     stack.push(tag);
+//     return true;
+//   } else {
+//     stack.pop();
+//     return false;
+//   }
+// }
+
+// console.log(getHTML());
